@@ -6,6 +6,9 @@ body {
     margin: 0;
     width: 100%;
     padding: 1rem;
+    font-family: var(--font-inter);
+    font-feature-settings: "liga" 1, "cv05" 1, "cv11" 1;
+    letter-spacing: -0.3px;
 }
 
 * {
@@ -14,11 +17,12 @@ body {
 
 p {
     margin: 0;
+    font-size: 1.25rem;
 }
 
-	.top {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-		align-items: center;
-	}
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: center;
+}
