@@ -24,5 +24,6 @@ p {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    margin-top: 1rem;
     align-items: center;
 }
