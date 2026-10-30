@@ -2,12 +2,13 @@
 import '../styles/global.css';
 import TopPart from '../components/TopPart';
 import { Font } from 'astro:assets';
+const allGames = Object.values(import.meta.glob('./games/*.md',{eager: true}));
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 		<link rel="icon" href="/images/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
@@ -16,5 +17,19 @@ import { Font } from 'astro:assets';
 	</head>
 	<body>
 		<TopPart client:load />
+		<div class="container">
+			{
+				allGames.map((game:any)=>{
+					return(
+						<div class="card">
+							<a href={game.frontmatter.link}>
+								<h3>{game.frontmatter.title}</h3>
+								<p>{game.frontmatter.description}</p>
+							</a>
+						</div>
+					)
+				})
+			}
+		</div>
 	</body>
 </html>
