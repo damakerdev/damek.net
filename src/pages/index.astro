@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+import { Image } from 'astro:assets';
 ---
 
 <html lang="en">
@@ -8,9 +10,22 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>damek.net</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="top">
+			<Image src="/images/logo.svg" width={240} height={64} alt="logo of damek.net" draggable={false}/>
+			<p>games and simulations all over the place!</p>
+		</div>
 	</body>
 </html>
+
+<style>
+	.top {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		align-items: center;
+	}
+
+</style>
