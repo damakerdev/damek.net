@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { Image } from 'astro:assets';
+import TopPart from '../components/TopPart';
 ---
 
 <html lang="en">
@@ -13,19 +13,6 @@ import { Image } from 'astro:assets';
 		<title>damek.net</title>
 	</head>
 	<body>
-		<div class="top">
-			<Image src="/images/logo.svg" width={240} height={64} alt="logo of damek.net" draggable={false}/>
-			<p>games and simulations all over the place!</p>
-		</div>
+		<TopPart />
 	</body>
 </html>
-
-<style>
-	.top {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-		align-items: center;
-	}
-
-</style>
