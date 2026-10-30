@@ -2,7 +2,9 @@
 import '../styles/global.css';
 import TopPart from '../components/TopPart';
 import { Font } from 'astro:assets';
-const allGames = Object.values(import.meta.glob('./games/*.md',{eager: true}));
+import { getCollection } from 'astro:content';
+
+const games = await getCollection('games');
 ---
 
 <html lang="en">
@@ -19,11 +21,11 @@ const allGames = Object.values(import.meta.glob('./games/*.md',{eager: true}));
 		<TopPart client:load />
 		<div class="container">
 			{
-				allGames.map((game:any)=>{
+				games.map(({id, data})=>{
 					return(
-						<a href={game.frontmatter.link} target="_blank" class="card">
-							<h3>{game.frontmatter.title}</h3>
-							<p>{game.frontmatter.description}</p>
+						<a href={data.link} target="_blank" class={`card ${id}`}>
+							<h3>{data.title}</h3>
+							<p>{data.description}</p>
 						</a>
 					)
 				})

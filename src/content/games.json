@@ -1,0 +1,26 @@
+[
+    {
+        "id": "test",
+        "title": "title",
+        "description": "this is a fun game",
+        "link": "https://damek.net/timedle"
+    },
+    {
+        "id": "test2",
+        "title": "title2",
+        "description": "this is a fun game",
+        "link": "https://damek.net/timedle"
+    },
+    {
+        "id": "test3",
+        "title": "title3",
+        "description": "this is a fun game",
+        "link": "https://damek.net/timedle"
+    },
+    {
+        "id": "test4",
+        "title": "title4",
+        "description": "this is a fun game",
+        "link": "https://damek.net/timedle"
+    }
+]

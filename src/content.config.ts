@@ -1,10 +1,11 @@
 import { defineCollection } from 'astro:content';
-import { glob, file} from 'astro/loaders';
+import { file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const games= defineCollection({
-    loader: glob({ base: './src/content/', pattern:'**/*.json'}),
+    loader: file('./src/content/games.json'),
     schema: z.object({
+        id: z.string(),
         title: z.string(),
         description: z.string(),
         link: z.string()
