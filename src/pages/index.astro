@@ -21,12 +21,10 @@ const allGames = Object.values(import.meta.glob('./games/*.md',{eager: true}));
 			{
 				allGames.map((game:any)=>{
 					return(
-						<div class="card">
-							<a href={game.frontmatter.link}>
-								<h3>{game.frontmatter.title}</h3>
-								<p>{game.frontmatter.description}</p>
-							</a>
-						</div>
+						<a href={game.frontmatter.link} target="_blank" class="card">
+							<h3>{game.frontmatter.title}</h3>
+							<p>{game.frontmatter.description}</p>
+						</a>
 					)
 				})
 			}
