@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import TopPart from '../components/TopPart';
+import Footer from '../components/Footer';
 import { Font } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
@@ -31,5 +32,6 @@ const games = await getCollection('games');
 				})
 			}
 		</div>
+		<Footer />
 	</body>
 </html>
